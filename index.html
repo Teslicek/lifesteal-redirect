@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Join Lifesteal SMP</title>
+  <title>Join LifeSteal SMP</title>
   <link rel="icon" href="favicon.ico">
 
   <style>
@@ -19,9 +19,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      text-align: center;
+      max-width: 360px;
     }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
     img { max-width: 200px; }
+
     button {
       padding: 12px 20px;
       font-size: 20px;
@@ -30,6 +41,18 @@
       border: 1px solid #000;
       background: #f2f2f2;
       cursor: pointer;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #cfcfcf;
+      line-height: 1.45;
+    }
+
+    .code {
+      font-family: monospace;
+      color: #ffffff;
+      user-select: all;
     }
   </style>
 
@@ -41,8 +64,21 @@
 </head>
 <body>
   <div class="stack">
-    <img src="logo.png" alt="Lifesteal SMP">
-    <button onclick="join()">Join Lifesteal SMP</button>
+    <h1>LifeSteal SMP</h1>
+
+    <img src="logo.png" alt="LifeSteal SMP">
+
+    <button onclick="join()">Join Bedrock Realm</button>
+
+    <div class="hint">
+      Java Edition:<br>
+      Multiplayer → Add Server → Address: <span class="code">lifestealsmp.com</span>
+    </div>
+
+    <div class="hint">
+      Bedrock Edition:<br>
+      Realms → Add/join Realm → Join an existing Realm → <span class="code">4TmLrnUtSXVXj2Q</span>
+    </div>
   </div>
 </body>
 </html>
