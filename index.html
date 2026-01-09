@@ -9,33 +9,36 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      height: 100svh;              /* mobile-safe viewport */
       display: grid;
       place-items: center;
       background: #161616;
       font-family: system-ui, sans-serif;
+      overflow: hidden;            /* no scrolling */
     }
+
     .stack {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-align: center;
       max-width: 360px;
+      padding: 12px;
     }
 
     h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       color: #ffffff;
     }
 
-    img { max-width: 200px; }
+    img { max-width: 180px; }
 
     button {
-      padding: 12px 20px;
-      font-size: 20px;
+      padding: 10px 18px;
+      font-size: 18px;
       font-weight: 600;
       border-radius: 8px;
       border: 1px solid #000;
@@ -44,15 +47,24 @@
     }
 
     .hint {
-      font-size: 14px;
+      font-size: 13px;
       color: #cfcfcf;
-      line-height: 1.45;
+      line-height: 1.4;
     }
 
     .code {
-      font-family: monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       color: #ffffff;
       user-select: all;
+    }
+
+    /* Extra tightening for very small phones */
+    @media (max-height: 680px) {
+      .stack { gap: 10px; }
+      h1 { font-size: 22px; }
+      img { max-width: 160px; }
+      button { font-size: 16px; padding: 9px 16px; }
+      .hint { font-size: 12px; }
     }
   </style>
 
